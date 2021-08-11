@@ -5,12 +5,14 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Login from "../components/display-components/Login"
 import CatCard from "../components/display-components/CatCard"
+import MagicBox from "../components/display-components/MagicBox"
 
 const SecondPage = () => (
   <Layout pageInfo={{ pageName: "page-2" }}>
     <SEO title="Page two" />
       <Login />
       <CatCard />
+      <MagicBox />
   </Layout>
 )
 
