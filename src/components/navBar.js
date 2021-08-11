@@ -1,8 +1,9 @@
 import React from "react"
 import { Link } from "gatsby"
 
-
 import { Navbar, Nav, Form, FormControl, Button } from "react-bootstrap"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faTwitter } from "@fortawesome/free-brands-svg-icons"
 
 const CustomNavbar = ({ pageInfo }) => {
   console.log(pageInfo)
@@ -12,6 +13,7 @@ const CustomNavbar = ({ pageInfo }) => {
         {/* <Container> */}
         <Link to="/" className="link-no-style">
           <Navbar.Brand as="span">You Eye!</Navbar.Brand>
+          <FontAwesomeIcon icon={faTwitter} />
         </Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
