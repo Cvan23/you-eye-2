@@ -7,6 +7,7 @@ import Login from "../components/display-components/Login"
 import CatCard from "../components/display-components/CatCard"
 import MagicBox from "../components/display-components/MagicBox"
 import DoubleSlide from "../components/display-components/DoubleSlide"
+import Clock from "../components/display-components/Clock"
 
 const SecondPage = () => (
   <Layout pageInfo={{ pageName: "page-2" }}>
@@ -15,6 +16,7 @@ const SecondPage = () => (
       <CatCard />
       <MagicBox />
       <DoubleSlide />
+      <Clock />
   </Layout>
 )
 

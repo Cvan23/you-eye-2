@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react'
+import { Container, Row, Col } from 'react-bootstrap';
 
 const leftSlideList = [
 	{
@@ -74,6 +75,9 @@ const DoubleSlide = () => {
 
 	}
   return (
+    <Container fluid>
+      <Row >
+        <Col>
     <div id="site-doubleslide">
       <div className="slider-container" ref={sliderRef}>
         <div className="left-slide" style={{ "top": `-${(slidesLength - 1) * 100}vh`, "transform": slideLeftTranslateY }}>
@@ -107,6 +111,9 @@ const DoubleSlide = () => {
         </div>
       </div>
     </div>
+    </Col>
+    </Row>
+    </Container>
   )
 }
 
