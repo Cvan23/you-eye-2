@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Container, Row, Col } from 'react-bootstrap';
 
 const MagicBox = () => {
   const [boxes, setBoxes] = useState([])
@@ -19,20 +20,26 @@ const MagicBox = () => {
 		setMagic(magic => !magic)
 	}
   return (
-    <div id="site-magicbox">
-      <div className="wrap">
-			<button className="magic" onClick={onClickHandler}>Magic Box!</button>
-        <div className={`boxes ${magic ? "big" : ""}`}>
-          {
-            boxes.map((box, idx) => {
-              return (
-                <div key={idx} className="box" style={{ "backgroundPosition": box }}></div>
-              )
-            })
-          }
-        </div>
-		  </div>
-    </div>
+    <Container fluid>
+      <Row>
+        <Col>
+          <div id="site-magicbox">
+            <div className="wrap">
+            <button className="magic" onClick={onClickHandler}>Magic Box!</button>
+              <div className={`boxes ${magic ? "big" : ""}`}>
+                {
+                  boxes.map((box, idx) => {
+                    return (
+                      <div key={idx} className="box" style={{ "backgroundPosition": box }}></div>
+                    )
+                  })
+                }
+              </div>
+            </div>
+          </div>
+        </Col>
+      </Row>
+    </Container>
   )
 }
 

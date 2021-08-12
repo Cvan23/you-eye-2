@@ -1,6 +1,4 @@
 #site-magicbox {
-  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 * {
 	margin: 0;
@@ -8,11 +6,11 @@
 	box-sizing: border-box;
 }
 
-body {
-	background-color: #fafafa;
-	font-family: 'Roboto', sans-serif;
-	overflow: hidden;
-}
+// body {
+// 	background-color: #fafafa;
+// 	font-family: 'Roboto', sans-serif;
+// 	overflow: hidden;
+// }
 
 .wrap {
 	display: flex;

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Container, Row, Col } from 'react-bootstrap';
 
 const imageList = [
 	{
@@ -36,24 +37,30 @@ const CatCard = () => {
 	};
 
   return (
-    <div id="site-catcard">
-      <div className='container'>
-			{imageList.map((image) => {
-				return (
-					<div
-						key={image.id}
-						className={`panel ${open === image.id ? 'active' : ''}`}
-						style={{
-							backgroundImage: `url(${image.url})`,
-						}}
-						onClick={(id) => openHandler(image.id)}
-					>
-						<h3>{image.title}</h3>
+		<Container fluid>
+			<Row>
+				<Col>
+					<div id="site-catcard">
+						<div className='container'>
+							{imageList.map((image) => {
+								return (
+									<div
+										key={image.id}
+										className={`panel ${open === image.id ? 'active' : ''}`}
+										style={{
+											backgroundImage: `url(${image.url})`,
+										}}
+										onClick={(id) => openHandler(image.id)}
+									>
+										<h3>{image.title}</h3>
+									</div>
+								);
+							})}
+						</div>
 					</div>
-				);
-			})}
-		</div>
-    </div>
+				</Col>
+			</Row>
+		</Container>
   )
 }
 

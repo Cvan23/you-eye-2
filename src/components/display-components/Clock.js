@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react'
-import { Container, Row } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 
 const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
@@ -57,23 +57,29 @@ const Clock = () => {
 		}
 	}
   return (
-    <Container>
-    <div id="site-clock">
-      <div className={`mode ${darkmode ? 'dark' : ''}`}>
-			<button className={`toggle ${darkmode ? 'dark' : ''}`} onClick={onClickHandler}>{`${darkmode ? 'Light mode' : 'Dark mode'}`}</button>
-			<div className="clock-container">
-				<div className="clock">
-					<div className={`needle hour ${darkmode ? 'dark' : ''}`} ref={hourRef}></div>
-					<div className={`needle minute ${darkmode ? 'dark' : ''}`} ref={minuteRef}></div>
-					<div className={`needle second ${darkmode ? 'dark' : ''}`} ref={secondRef}></div>
-					<div className={`center-point ${darkmode ? 'dark' : ''}`}></div>
-				</div>
+    <Container fluid>
+      <Row>
+        <Col>
+          <div id="site-clock">
+            <div className={`mode ${darkmode ? 'dark' : ''}`}>
+              <button className={`toggle ${darkmode ? 'dark' : ''}`} onClick={onClickHandler}>{`${darkmode ? 'Light mode' : 'Dark mode'}`}</button>
+              <div className="clock-container">
+                <div className="clock">
+                  <div className={`needle hour ${darkmode ? 'dark' : ''}`} ref={hourRef}></div>
+                  <div className={`needle minute ${darkmode ? 'dark' : ''}`} ref={minuteRef}></div>
+                  <div className={`needle second ${darkmode ? 'dark' : ''}`} ref={secondRef}></div>
+                  <div className={`center-point ${darkmode ? 'dark' : ''}`}></div>
+                </div>
 
-				<div className="time">{hoursForClock}:{minutes < 10 ? `0${minutes}` : minutes} {ampm}</div>
-				<div className={`date ${darkmode ? 'dark' : ''}`}>{days[day]}, {months[month]} <span className={`circle ${darkmode ? 'dark' : ''}`}>{date}</span></div>
-			</div>
-		</div >
-    </div>
+                <div className="time">{hoursForClock}:{minutes < 10 ? `0${minutes}` : minutes} {ampm}</div>
+                <div className={`date ${darkmode ? 'dark' : ''}`}>
+                  {days[day]}, {months[month]} <span className={`circle ${darkmode ? 'dark' : ''}`}>{date}</span>
+                </div>
+              </div>
+            </div >
+          </div>
+        </Col>
+      </Row>
     </Container>
   )
 }

@@ -1,5 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react'
 import { Container, Row, Col } from 'react-bootstrap';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faArrowAltCircleUp, faArrowAltCircleDown } from "@fortawesome/free-solid-svg-icons"
 
 const leftSlideList = [
 	{
@@ -78,41 +80,41 @@ const DoubleSlide = () => {
     <Container fluid>
       <Row >
         <Col>
-    <div id="site-doubleslide">
-      <div className="slider-container" ref={sliderRef}>
-        <div className="left-slide" style={{ "top": `-${(slidesLength - 1) * 100}vh`, "transform": slideLeftTranslateY }}>
-          {
-            leftSlideList.map((slide, idx) => {
-              return (
-                <div key={idx} style={{ "backgroundColor": slide.style }}>
-                  <h1>{slide.title}</h1>
-                  <p>{slide.content}</p>
-                </div>
-              )
-            })
-          }
-        </div>
-        <div className="right-slide" style={{ "transform": slideRightTranslateY }}>
-          {
-            rightSlideList.map((slide, idx) => {
-              return (
-                <div key={idx} style={{ "backgroundImage": `url(${slide.bgImage})` }} />
-              )
-            })
-          }
-        </div>
-        <div className="action-buttons">
-          <button className="down-button" onClick={() => changeSlide('down')}>
-            <i className="fas fa-arrow-down"></i>
-          </button>
-          <button className="up-button" onClick={() => changeSlide('up')}>
-            <i className="fas fa-arrow-up"></i>
-          </button>
-        </div>
-      </div>
-    </div>
-    </Col>
-    </Row>
+          <div id="site-doubleslide">
+            <div className="slider-container" ref={sliderRef}>
+              <div className="left-slide" style={{ "top": `-${(slidesLength - 1) * 100}vh`, "transform": slideLeftTranslateY }}>
+                {
+                  leftSlideList.map((slide, idx) => {
+                    return (
+                      <div key={idx} style={{ "backgroundColor": slide.style }}>
+                        <h1>{slide.title}</h1>
+                        <p>{slide.content}</p>
+                      </div>
+                    )
+                  })
+                }
+              </div>
+              <div className="right-slide" style={{ "transform": slideRightTranslateY }}>
+                {
+                  rightSlideList.map((slide, idx) => {
+                    return (
+                      <div key={idx} style={{ "backgroundImage": `url(${slide.bgImage})` }} />
+                    )
+                  })
+                }
+              </div>
+              <div className="action-buttons">
+                <button className="down-button" onClick={() => changeSlide('down')}>
+								<FontAwesomeIcon icon={faArrowAltCircleDown} />
+                </button>
+                <button className="up-button" onClick={() => changeSlide('up')}>
+								<FontAwesomeIcon icon={faArrowAltCircleUp} />
+                </button>
+              </div>
+            </div>
+          </div>
+        </Col>
+      </Row>
     </Container>
   )
 }

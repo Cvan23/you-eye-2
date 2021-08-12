@@ -1,61 +1,45 @@
 #site-clock {
+  
+  // display: flex;
+
   @import url('https://fonts.googleapis.com/css?family=Heebo&display=swap');
 
 * {
 	margin: 0;
+  margin-bottom: 50px;
 	padding: 0;
 	box-sizing: border-box;
 }
 
-// :root {
-//   --primary-color: rgb(3, 7, 70);
-//   --secondary-color: rgb(211, 245, 210);
-// }
-
-// html {
-//   transition: all 0.5s ease-in;
-//   background-color: rgb(229, 250, 228);
-// }
-
-// html.dark {
-//   --primary-color:rgb(211, 245, 210);
-//   --secondary-color:rgb(3, 7, 70);
-// }
-
-// html.dark {
-//   background-color:rgb(3, 7, 70);
-//   color: var(--primary-color);
-// }
-
 .mode {
-	background-color: #fff;
-	color: #000;
+	background-color: rgb(211, 245, 210);
+	color: rgb(3, 7, 70);
 	transition: all 0.5s ease-in;
 }
 
 .mode.dark {
-	background-color: #111;
-	color: #fff;
+	background-color: rgb(3, 7, 70);
+	color: rgb(211, 245, 210);
 }
 
-// body {
-// 	background-color: #fff;
-// 	color: 111;
-// 	font-family: 'Heebo', sans-serif;
-// 	display: flex;
-// 	align-items: center;
-// 	justify-content: center;
-// 	height: 100vh;
-// 	overflow: hidden;
-// }
+body {
+	background-color: #fff;
+	color: 111;
+	font-family: 'Heebo', sans-serif;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	overflow: hidden;
+}
 
 .toggle {
-	background-color: var(--primary-color);
-	color: var(--secondary-color);
+	background-color: rgb(3, 7, 70);
+	color: rgb(211, 245, 210);
 	border: 0;
 	border-radius: 4px;
 	padding: 8px 12px;
-	position: absolute;
+	position: relative;
 	top: 100px;
 	left: 50%;
 	transform: translateX(-50%);
@@ -63,8 +47,8 @@
 }
 
 .toggle.dark {
-	background-color: var(--secondary-color);
-	color: var(--primary-color);
+	background-color: rgb(211, 245, 210);
+	color: rgb(3, 7, 70);
 }
 
 .toggle:focus {
@@ -74,6 +58,7 @@
 .clock-container {
 	display: flex;
 	flex-direction: column;
+  margin-top: 80px;
 	justify-content: space-between;
 	align-items: center;
 }
@@ -82,10 +67,12 @@
 	position: relative;
 	width: 200px;
 	height: 200px;
+  border-radius: 50%;
+  box-shadow: 2px 2px 2px 2px #888888b0;
 }
 
 .needle {
-	background-color: #111;
+	background-color: rgb(3, 7, 70);
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -96,7 +83,7 @@
 }
 
 .needle.dark {
-	background-color: #fff;
+	background-color: rgb(211, 245, 210);
 }
 
 .needle.hour {
@@ -127,7 +114,7 @@
 
 .center-point::after {
 	content: '';
-	background-color: #111;
+	background-color: rgb(3, 7, 70);
 	width: 5px;
 	height: 5px;
 	position: absolute;
@@ -139,7 +126,7 @@
 
 .center-point.dark::after {
 	content: '';
-	background-color: #fff;
+	background-color: rgb(211, 245, 210);
 	width: 5px;
 	height: 5px;
 	position: absolute;
@@ -161,21 +148,22 @@
 }
 
 .date .circle {
-	background-color: #111;
-	color: #fff;
+	background-color: rgb(3, 7, 70);
+	color: rgb(211, 245, 210);
 	border-radius: 50%;
-	height: 18px;
-	width: 18px;
+	height: 20px;
+	width: 20px;
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
 	line-height: 18px;
 	transition: all 0.5s ease-in;
-	font-size: 12px;
+	font-size: 14px;
+  font-weight: bold;
 }
 
 .date .circle.dark {
-	background-color: #fff;
-	color: #111;
+	background-color: rgb(211, 245, 210);
+	color: rgb(3, 7, 70);
 }
 }
