@@ -12,11 +12,11 @@ import Clock from "../components/display-components/Clock"
 const SecondPage = () => (
   <Layout pageInfo={{ pageName: "page-2" }}>
     <SEO title="Page two" />
-      <Login />
+      <Clock />
       <CatCard />
       <MagicBox />
       <DoubleSlide />
-      <Clock />
+      <Login />
   </Layout>
 )
 
