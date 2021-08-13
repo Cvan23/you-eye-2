@@ -25,7 +25,7 @@ const MagicBox = () => {
         <Col>
           <div id="site-magicbox">
             <div className="wrap">
-            <button className="magic" onClick={onClickHandler}>Magic Box!</button>
+            <button className="magic" onClick={onClickHandler}>Click For Magic!</button>
               <div className={`boxes ${magic ? "big" : ""}`}>
                 {
                   boxes.map((box, idx) => {

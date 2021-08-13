@@ -12,29 +12,20 @@ const CustomNavbar = ({ pageInfo }) => {
       <Navbar variant="dark" expand="lg" id="site-navbar">
         {/* <Container> */}
         <Link to="/" className="link-no-style">
-          <Navbar.Brand as="span">You Eye!</Navbar.Brand>
-          <FontAwesomeIcon icon={faTwitter} />
+          <Navbar.Brand as="span">Home</Navbar.Brand>
+          {/* <FontAwesomeIcon icon={faTwitter} /> */}
         </Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto" activeKey={pageInfo && pageInfo.pageName}>
             <Link to="/page-2" className="link-no-style">
               <Nav.Link as="span" eventKey="page-2">
-                Page 2
+                UI/UX Components!
               </Nav.Link>
             </Link>
           </Nav>
           <Nav className="ml-auto">
-            <Form inline onSubmit={e => e.preventDefault()}>
-              <Form.Group>
-                <FormControl
-                  type="text"
-                  placeholder="Fake Search"
-                  className="mr-2"
-                />
-              </Form.Group>
-              <Button>Fake Button</Button>
-            </Form>
+            
           </Nav>
         </Navbar.Collapse>
         {/* </Container> */}

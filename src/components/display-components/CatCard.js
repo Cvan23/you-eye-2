@@ -40,6 +40,7 @@ const CatCard = () => {
 		<Container fluid>
 			<Row>
 				<Col>
+				<h1>Click on each collumn for dynamic content!</h1>
 					<div id="site-catcard">
 						<div className='container'>
 							{imageList.map((image) => {

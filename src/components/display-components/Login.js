@@ -6,7 +6,7 @@ const Login = () => {
     
           <div id="site-login">
             <div className='container'>
-              <h1>Please Login</h1>
+              <h1>Please click in form fields to see animation!</h1>
               <form>
                 <div className='form-control'>
                   <input type='text' required />

@@ -80,6 +80,7 @@ const DoubleSlide = () => {
     <Container fluid>
       <Row >
         <Col>
+					<h1>Click Up and Down arrows to reveal dynamic content!</h1>
           <div id="site-doubleslide">
             <div className="slider-container" ref={sliderRef}>
               <div className="left-slide" style={{ "top": `-${(slidesLength - 1) * 100}vh`, "transform": slideLeftTranslateY }}>
