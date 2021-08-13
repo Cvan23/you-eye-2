@@ -45,10 +45,10 @@ const Layout = ({ children, pageInfo }) => (
           <Row noGutters>
             <Col className="footer-col">
               <footer>
-                <span>
-                  © {new Date().getFullYear()}, Built with
+              <span>
+                  © {new Date().getFullYear()}, Built with Gatsby, by 
                   {` `}
-                  <a href="https://www.gatsbyjs.org">Gatsby</a>
+                  <a target="-blank" href="https://koa-script.netlify.app/">koaScript</a>
                 </span>
               </footer>
             </Col>

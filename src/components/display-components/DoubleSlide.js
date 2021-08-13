@@ -6,7 +6,7 @@ import { faArrowAltCircleUp, faArrowAltCircleDown } from "@fortawesome/free-soli
 const leftSlideList = [
 	{
 		"title": "Tuxie Kitty",
-		"content": "a very dapper cat!",
+		"content": "a dapper cat!",
 		"style": "#393e47ad"
 	},
 	{
@@ -16,7 +16,7 @@ const leftSlideList = [
 	},
 	{
 		"title": "Ginger Cat!",
-		"content": "the life of a house lion",
+		"content": "house lion!",
 		"style": "#c37a1a"
 	},
 	{

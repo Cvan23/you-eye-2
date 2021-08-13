@@ -1,0 +1,142 @@
+#site-landing {
+
+  display: flex;
+  // overflow-x: hidden;
+  // overflow-y: hidden;
+
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+  display: flex;
+  overflow-x: hidden;
+  overflow-y: hidden;
+
+}
+
+// body {
+// 	font-family: 'Roboto', sans-serif;
+// 	overflow-x: hidden;
+// }
+
+.container {
+	position: relative;
+	width: 100vw;
+	height: 75vh;
+	background: rgb(51, 51, 51);
+}
+
+.split {
+	position: absolute;
+	width: 50%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.split.left {
+	left: 0;
+  background: url(https://images.unsplash.com/photo-1588218397083-c09ae0d2c970?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.split.left::before {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color:rgba(87, 84, 236, 0.7);
+}
+
+.split.right {
+	right: 0;
+	background: url(https://images.unsplash.com/photo-1542296935124-75ae8a4e6329?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.split.right::before {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(43, 43, 43, 0.8);
+}
+
+.split.left,
+.split.right,
+.split.left::before,
+.split.right::before {
+	transition: all 1000ms ease-in-out;
+}
+
+h1 {
+	font-size: 4rem;
+	color: #fff;
+	position: absolute;
+	left: 50%;
+	top: 20%;
+	transform: translateX(-50%);
+	white-space: nowrap;
+}
+
+.btn {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	left: 50%;
+	top: 40%;
+	transform: translateX(-50%);
+	text-decoration: none;
+	color: #fff;
+	border: #fff solid 0.2rem;
+	font-size: 1rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	width: 15rem;
+	padding: 1.5rem;
+}
+
+.split.left .btn:hover {
+	background-color: rgba(87, 84, 236, 0.335);
+	border-color: rgba(87, 84, 236, 1);
+}
+
+.split.right .btn:hover {
+	background-color: rgba(66, 66, 66, 0.383);
+	border-color: rgb(66, 66, 66);
+}
+
+.hover-left .left {
+	width: 75%;
+}
+
+.hover-left .right {
+	width: 25%;
+}
+
+.hover-right .right {
+	width: 75%;
+}
+
+.hover-right .left {
+	width: 25%;
+}
+
+@media (max-width: 800px) {
+	h1 {
+		font-size: 2rem;
+		top: 30%;
+	}
+
+	.btn {
+		width: 12rem;
+		padding: 1.2rem;
+	}
+}
+}

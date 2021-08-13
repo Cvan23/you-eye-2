@@ -1,7 +1,8 @@
 import React from "react"
 import { Link } from "gatsby"
-import { Row, Col, Container, ListGroup, Card, Button } from "react-bootstrap"
+import { Row, Col, Container, Card } from "react-bootstrap"
 
+import Landing from "./Landing"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
@@ -13,19 +14,8 @@ const IndexPage = () => (
     <div id="site-styles">
     <Container className="text-center">
       <Card>
-        <Link className="btn" to="/page-2">
-          <Button variant="primary" size="lg">
-            Jump In!
-          </Button>
-        </Link >
         <Card.Body>
-          <Card.Title>Special title treatment</Card.Title>
-          <Card.Text>
-            With supporting text below as a natural lead-in to additional content.
-          </Card.Text>
-          <Link className="btn" to="/page-2">
-            <Button variant="primary" size="lg">Go somewhere</Button>
-          </Link>
+          <Landing />
         </Card.Body>
       </Card>
     </Container>
