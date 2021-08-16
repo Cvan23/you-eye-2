@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import { Navbar, Nav, Form, FormControl, Button } from "react-bootstrap"
+import { Navbar, Nav, Form, FormControl, Button, NavItem, NavLink } from "react-bootstrap"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faTwitter } from "@fortawesome/free-brands-svg-icons"
 
@@ -23,10 +23,17 @@ const CustomNavbar = ({ pageInfo }) => {
                 UI/UX Components!
               </Nav.Link>
             </Link>
+            <NavItem className="mr-auto">
+              <NavLink target="-blank" href="https://github.com/Cvan23/you-eye-2">Github Repo For This Project</NavLink>
+            </NavItem>
+            <NavItem className="mr-auto">
+              <NavLink target="-blank" href="https://koa-script.netlify.app/">Visit My Portfolio Page!</NavLink>
+            </NavItem>
           </Nav>
           <Nav className="ml-auto">
             
           </Nav>
+          
         </Navbar.Collapse>
         {/* </Container> */}
       </Navbar>
