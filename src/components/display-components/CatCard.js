@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, Card } from 'react-bootstrap';
 
 const imageList = [
 	{
@@ -40,7 +40,6 @@ const CatCard = () => {
 		<Container fluid>
 			<Row>
 				<Col>
-				<h1>Click on each collumn for dynamic content!</h1>
 					<div id="site-catcard">
 						<div className='container'>
 							{imageList.map((image) => {

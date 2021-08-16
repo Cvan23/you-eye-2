@@ -39,7 +39,7 @@ const Landing = () => {
             Jump In!
           </a>
         </Link >
-			</div>
+        </div>
 			<div
 				className='split right'
 				onMouseEnter={rightMouseEnterHandler}
