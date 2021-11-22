@@ -11,3 +11,5 @@ A GatsbyJS starter that includes
 - sticky on scroll navbar
 - SASS compiler
 - basic layout
+
+## Examples of the code can be viewed and modified in these [Codepen](https://codepen.io/cvancat) environments. 
