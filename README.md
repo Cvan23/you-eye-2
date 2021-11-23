@@ -13,3 +13,5 @@ A GatsbyJS starter that includes
 - basic layout
 
 ## Examples of the code can be viewed and modified in these [Codepen](https://codepen.io/cvancat) environments. 
+
+### Clock w/ switchable light/dark theme [Here](https://codepen.io/cvancat/pen/MWbwRjx)
