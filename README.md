@@ -15,3 +15,7 @@ A GatsbyJS starter that includes
 ## Examples of the code can be viewed and modified in these [Codepen](https://codepen.io/cvancat) environments. 
 
 ### Clock w/ switchable light/dark theme [Here](https://codepen.io/cvancat/pen/MWbwRjx)
+
+### Expanding Cards [Here](https://codepen.io/cvancat/pen/vYJeWXR)
+
+### Vertical Double Sliding Cards [Here](https://codepen.io/cvancat/pen/wvJRWaP)
